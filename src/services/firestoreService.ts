@@ -235,7 +235,7 @@ export const addCertificate = async (cert: Omit<Certification, 'id'>): Promise<s
 
 export const updateCertificate = async (id: string, cert: Partial<Certification>): Promise<void> => {
   const docRef = doc(db, 'certificates', id);
-  await updateDoc(docRef, { ...cert, updatedAt: serverTimestamp() });
+  await setDoc(docRef, { ...cert, updatedAt: serverTimestamp() }, { merge: true });
 };
 
 export const deleteCertificate = async (id: string): Promise<void> => {
