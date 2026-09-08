@@ -1,0 +1,253 @@
+import { Project, SkillCategory, Certification, EducationItem, Achievement, SocialLink } from '../types';
+
+export const PERSONAL_INFO = {
+  name: 'K AKASH',
+  fullName: 'K AKASH',
+  tagline: 'B.Tech CSE (5th Sem) | AI/ML & Full Stack Engineer | CMR University',
+  roles: [
+    'AI/ML Engineer',
+    'Full Stack Developer (MERN & PostgreSQL)',
+    'Agentic AI & RAG Specialist (LangChain)',
+    'Autonomous Systems Builder',
+  ],
+  bio: 'Computer Science undergraduate at CMR University with hands-on experience building full-stack AI-powered applications using the MERN stack, PostgreSQL, and LLM APIs. Currently deepening expertise in agentic AI systems (LangChain, RAG). IEEE award winner with a track record of shipping and deploying live projects end-to-end.',
+  location: 'Bengaluru, Karnataka',
+  college: 'CMR University, Bengaluru',
+  degree: 'B.Tech, Computer Science & Engineering',
+  semester: '5th Semester',
+  cgpa: '8.52 CGPA',
+  phone: '+91 7483041745',
+  email: 'kakashsunny2007@gmail.com',
+  github: 'https://github.com/kakashsunny',
+  linkedin: 'https://www.linkedin.com/in/k-akash-620b63427/',
+  portfolioUrl: 'https://akashsunnyportfoilo.netlify.app',
+  twitter: 'https://x.com',
+  status: 'Open for AI/ML & High-Impact Engineering Roles',
+  quote: 'Build. Explore. Grow.',
+  avatarUrl: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=900&auto=format&fit=crop',
+  mountainBgUrl: 'https://images.unsplash.com/photo-1517824806704-9040b037703b?q=80&w=2400&auto=format&fit=crop',
+};
+
+export const QUICK_STATS = [
+  { value: 3, suffix: '+', label: 'Production Projects', description: 'Formly AI, MongoDB Mastery, AgriGuard' },
+  { value: 2, suffix: '', label: 'IEEE Awards Won', description: '1st Place Techno Whiz & Expo Winner' },
+  { value: 8.52, suffix: '', label: 'CGPA', description: 'CMR University B.Tech CSE' },
+  { value: 4, suffix: '+', label: 'AI Badges & Certs', description: 'Google Cloud & Agentic AI' },
+];
+
+export const PROJECTS: Project[] = [
+  {
+    id: 'formly-ai',
+    title: 'Formly AI - AI-Native Form Builder',
+    tagline: 'AI-first alternative to Google Forms: describe a form in plain English and Gemini AI generates a ready-to-publish form in seconds.',
+    description: 'Built an AI-first alternative to Google Forms: describe a form in plain English and Gemini AI generates a polished, ready-to-publish form in seconds - no manual field-by-field setup. Out-features Google Forms with 18+ field types, fully custom branding, and a dedicated PostgreSQL database per user instead of shared Google infrastructure. Shipped a built-in analytics dashboard with Recharts, engineered secure auth with JWT, and deployed across Render and Neon.',
+    category: 'AI / ML',
+    image: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1200&auto=format&fit=crop',
+    tags: ['React', 'Vite', 'Tailwind CSS', 'Node.js', 'Express.js', 'PostgreSQL', 'Google Gemini API', 'Render', 'Neon', 'JWT'],
+    metrics: [
+      { label: 'Field Types', value: '18+' },
+      { label: 'Data Ownership', value: '100%' },
+      { label: 'Form Gen Time', value: '< 3s' },
+    ],
+    featured: true,
+    githubUrl: 'https://github.com/kakashsunny',
+    liveUrl: 'https://akashsunnyportfoilo.netlify.app',
+    highlights: [
+      'Describe a form in plain English and Gemini AI generates a polished, ready-to-publish form in seconds',
+      '18+ field types, custom branding, and dedicated PostgreSQL database per user instead of shared Google infrastructure',
+      'Built-in analytics dashboard (conversion, completion, drop-off, device breakdown) using Recharts',
+      'Engineered secure JWT authentication and deployed production architecture across Render and Neon',
+    ],
+    architecture: 'React/Vite frontend with Tailwind CSS, Node.js/Express.js backend proxying Gemini API with JWT auth, connected to Neon PostgreSQL database and deployed on Render.',
+  },
+  {
+    id: 'mongodb-mastery',
+    title: 'MongoDB Mastery - Interactive Learning Platform',
+    tagline: 'Dashboard-style learning platform covering 140+ MongoDB topics with live query playground & aggregation pipeline visualizer.',
+    description: 'Built a dashboard-style learning platform covering 140+ MongoDB topics, with a live query playground and aggregation pipeline visualizer. Created 300+ practice questions and a 100-question interview bank with progress tracking and bookmarking. Built with React, TypeScript, Vite, and shadcn-ui; deployed on Vercel.',
+    category: 'Full Stack',
+    image: 'https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?q=80&w=1200&auto=format&fit=crop',
+    tags: ['React', 'TypeScript', 'Vite', 'shadcn-ui', 'Tailwind CSS', 'MongoDB', 'Vercel'],
+    metrics: [
+      { label: 'MongoDB Topics', value: '140+' },
+      { label: 'Practice Qs', value: '300+' },
+      { label: 'Interview Bank', value: '100 Qs' },
+    ],
+    featured: true,
+    githubUrl: 'https://github.com/kakashsunny',
+    liveUrl: 'https://akashsunnyportfoilo.netlify.app',
+    highlights: [
+      'Interactive dashboard covering 140+ MongoDB topics with live query playground',
+      'Aggregation pipeline visualizer showing real-time document transformation stages',
+      '300+ curated practice questions and 100-question interview bank with progress tracking',
+      'Engineered with TypeScript, React, Vite, shadcn-ui, and deployed on Vercel',
+    ],
+    architecture: 'TypeScript React SPA with shadcn-ui and Tailwind CSS, client-side query simulator and live aggregation runner deployed on Vercel.',
+  },
+  {
+    id: 'agriguard-ai',
+    title: 'AgriGuard - Hyperlocal AI Crop Advisory Platform',
+    tagline: 'Hyperlocal AI crop-advisory system where AI gives first-pass diagnosis and nearby farmers confirm or correct it.',
+    description: 'Designing an AI crop-advisory system where AI gives a first-pass diagnosis (pest/disease detection) and nearby farmers confirm or correct it, building a hyperlocal, self-improving knowledge layer. Scoping MVP around AI diagnosis, a community confirmation layer, and a live + farmer-reported mandi price feed.',
+    category: 'AI / ML',
+    image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=1200&auto=format&fit=crop',
+    tags: ['Python', 'Machine Learning', 'Computer Vision', 'React', 'Node.js', 'FastAPI', 'Gemini API'],
+    metrics: [
+      { label: 'AI Diagnosis', value: 'Instant' },
+      { label: 'Knowledge Graph', value: 'Hyperlocal' },
+      { label: 'Mandi Prices', value: 'Live Feed' },
+    ],
+    featured: true,
+    githubUrl: 'https://github.com/kakashsunny',
+    liveUrl: 'https://akashsunnyportfoilo.netlify.app',
+    highlights: [
+      'AI-first pest and plant disease detection pipeline with high-accuracy image diagnosis',
+      'Community confirmation layer creating a hyperlocal, self-improving agricultural knowledge graph',
+      'Live + farmer-reported mandi price feed for market awareness and fair trading',
+    ],
+    architecture: 'Vision diagnosis model with FastAPI microservice, React frontend, and real-time community validation feeds.',
+  },
+];
+
+export const SKILL_CATEGORIES: SkillCategory[] = [
+  {
+    name: 'Artificial Intelligence, ML & Data Science',
+    icon: 'BrainCircuit',
+    description: 'LLMs, Agentic AI (LangChain, RAG), Gemini API, Machine Learning, Python Data Science',
+    skills: [
+      { name: 'Google Gemini API', level: 95, experience: 'Production', popular: true },
+      { name: 'Agentic AI & LangChain', level: 90, experience: 'Current Focus', popular: true },
+      { name: 'RAG Systems & Vector Search', level: 88, experience: '1+ yr', popular: true },
+      { name: 'Machine Learning & AI', level: 86, experience: '2+ yrs', popular: true },
+      { name: 'NumPy, Pandas, Matplotlib, Seaborn', level: 90, experience: '2+ yrs' },
+      { name: 'Vertex AI & Generative AI', level: 88, experience: 'Google Badges' },
+      { name: 'Prompt Engineering', level: 94, experience: '2+ yrs', popular: true },
+      { name: 'Power BI', level: 82, experience: '1+ yr' },
+    ],
+  },
+  {
+    name: 'Full Stack & Web Engineering (MERN)',
+    icon: 'Layers',
+    description: 'React, Node.js, Express.js, Vite, TypeScript, Tailwind CSS, shadcn-ui',
+    skills: [
+      { name: 'React & Vite', level: 94, experience: '2+ yrs', popular: true },
+      { name: 'JavaScript & TypeScript', level: 92, experience: '2+ yrs', popular: true },
+      { name: 'Node.js & Express.js', level: 90, experience: '2+ yrs', popular: true },
+      { name: 'Tailwind CSS & shadcn-ui', level: 96, experience: '2+ yrs', popular: true },
+      { name: 'REST APIs & JWT Auth', level: 92, experience: '2+ yrs', popular: true },
+      { name: 'HTML5 & Modern CSS3', level: 95, experience: '3+ yrs' },
+    ],
+  },
+  {
+    name: 'Databases, Languages & Deployment Platforms',
+    icon: 'CloudLightning',
+    description: 'PostgreSQL, MongoDB, SQL, Python, Java, C++, Git, GitHub, Render, Vercel',
+    skills: [
+      { name: 'Python', level: 94, experience: 'Grade A Certified', popular: true },
+      { name: 'PostgreSQL (Neon)', level: 90, experience: 'Production', popular: true },
+      { name: 'MongoDB', level: 92, experience: 'Mastery Platform', popular: true },
+      { name: 'SQL Database Management', level: 88, experience: '2+ yrs' },
+      { name: 'Java & C++', level: 85, experience: 'Academic' },
+      { name: 'Git & GitHub', level: 94, experience: 'Daily Flow', popular: true },
+      { name: 'Render & Vercel Deployment', level: 90, experience: 'Production' },
+    ],
+  },
+];
+
+export const CERTIFICATIONS: Certification[] = [
+  {
+    id: 'gcp-skills-boost-ai',
+    title: 'Google Cloud Skills Boost - AI Track (4 Badges)',
+    issuer: 'Google Cloud Skills Boost',
+    issueDate: '2025',
+    credentialId: 'GCP-AI-4BADGES',
+    credentialUrl: 'https://www.cloudskillsboost.google',
+    badgeColor: 'from-blue-500 to-cyan-400',
+    skills: ['Vertex AI', 'LLMs', 'Generative AI', 'Responsible AI', 'Prompt Engineering'],
+    description: 'Earned 4 official Google Cloud skill badges covering Vertex AI Studio, Large Language Models, Generative AI architecture, and Responsible AI principles.',
+    iconName: 'Cloud',
+  },
+  {
+    id: 'agentic-ai-learning-path',
+    title: 'Agentic AI Learning Path - LangChain, RAG & LLMs',
+    issuer: 'Agentic AI Systems',
+    issueDate: 'In Progress',
+    credentialId: 'AGENTIC-AI-RAG',
+    credentialUrl: 'https://github.com/kakashsunny',
+    badgeColor: 'from-purple-500 to-indigo-500',
+    skills: ['LangChain', 'RAG Systems', 'Agentic Workflows', 'Vector Databases', 'Multi-Agent Loops'],
+    description: 'Comprehensive specialization focusing on autonomous agentic architectures, retrieval-augmented generation (RAG), tool-calling, and multi-agent coordination.',
+    iconName: 'Cpu',
+  },
+  {
+    id: 'iant-python-programming',
+    title: 'Python Programming - Grade A',
+    issuer: 'IANT Computer Education',
+    issueDate: 'Sep 2024',
+    credentialId: 'IANT-PY-GR-A-2024',
+    credentialUrl: 'https://github.com/kakashsunny',
+    badgeColor: 'from-emerald-500 to-teal-400',
+    skills: ['Python', 'Object-Oriented Programming', 'Data Structures', 'Algorithms', 'Scripting'],
+    description: 'Verified Grade A certification in Python programming covering core language mechanics, OOP principles, data structures, and algorithmic implementation.',
+    iconName: 'Code',
+  },
+];
+
+export const EDUCATION: EducationItem[] = [
+  {
+    id: 'cmr-university-btech',
+    degree: 'Bachelor of Technology (B.Tech)',
+    field: 'Computer Science and Engineering',
+    institution: 'CMR University',
+    location: 'Bengaluru, Karnataka',
+    period: '2024 – 2028 (Expected)',
+    grade: '8.52 CGPA',
+    status: 'Currently in 5th Semester',
+    highlights: [
+      '1st Place Winner in "Cognitive Combat" - Techno Whiz \'25 (IEEE Bangalore Section, CMR University)',
+      'Winner - Footstep Energy Generator embedded system at IEEE Expo Embedded (ECE Department)',
+      'Active developer and researcher in AI/ML & MERN full-stack architectures',
+    ],
+    coursework: [
+      'Data Structures & Algorithms',
+      'Database Management Systems (PostgreSQL, MongoDB)',
+      'Artificial Intelligence & Machine Learning',
+      'Operating Systems',
+      'Computer Networks',
+      'Web Technologies & Cloud Deployment',
+    ],
+  },
+];
+
+export const ACHIEVEMENTS: Achievement[] = [
+  {
+    id: 'ieee-techno-whiz-25',
+    title: '1st Place, "Cognitive Combat" - Techno Whiz \'25',
+    category: 'Hackathon',
+    date: 'Jul 2025',
+    organization: 'IEEE Bangalore Section, CMR University',
+    metric: '1st Place',
+    metricLabel: 'Champion Winner',
+    description: 'Secured 1st Place in the Cognitive Combat AI & Engineering competition conducted by IEEE Bangalore Section at CMR University.',
+    badge: '🏆 1st Place Winner',
+  },
+  {
+    id: 'ieee-expo-footstep',
+    title: 'Winner - Footstep Energy Generator Project',
+    category: 'Research',
+    date: '2025',
+    organization: 'IEEE Expo Embedded, ECE Department',
+    metric: 'Winner',
+    metricLabel: 'Best Embedded Project',
+    description: 'Won the top project award for developing the Footstep Energy Generator at the IEEE Expo Embedded event.',
+    badge: '⚡ Expo Winner',
+  },
+];
+
+export const SOCIAL_LINKS: SocialLink[] = [
+  { name: 'GitHub', url: 'https://github.com/kakashsunny', icon: 'Github', handle: '@kakashsunny', color: 'hover:text-white' },
+  { name: 'LinkedIn', url: 'https://www.linkedin.com/in/k-akash-620b63427/', icon: 'Linkedin', handle: 'in/k-akash-620b63427', color: 'hover:text-cyan-400' },
+  { name: 'Portfolio', url: 'https://akashsunnyportfoilo.netlify.app', icon: 'ExternalLink', handle: 'akashsunnyportfoilo.netlify.app', color: 'hover:text-sky-400' },
+  { name: 'Email', url: 'mailto:kakashsunny2007@gmail.com', icon: 'Mail', handle: 'kakashsunny2007@gmail.com', color: 'hover:text-emerald-400' },
+  { name: 'WhatsApp', url: 'https://wa.me/917483041745', icon: 'MessageSquare', handle: '+91 7483041745', color: 'hover:text-green-400' },
+];
