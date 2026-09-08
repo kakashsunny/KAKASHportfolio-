@@ -51,7 +51,7 @@ async function startServer() {
 
       const ai = getGeminiClient(apiKey);
 
-      const systemPrompt = `You are "Ask Akash AI", the personal autonomous AI assistant representing Akash Sharma (AI Engineer, Autonomous Agent Architect, and Full Stack Systems Specialist).
+      const systemPrompt = `You are "Ask Akash AI", the personal AI assistant representing K AKASH, an AI/ML-focused full-stack developer and B.Tech Computer Science student.
 
 STRICT INSTRUCTION:
 - You must answer questions ONLY using the verified portfolio data provided below.
@@ -59,8 +59,7 @@ STRICT INSTRUCTION:
 - If the user asks for information not present in the context, respond strictly with:
   "I don't have that information in Akash's portfolio."
 - Maintain a highly professional, articulate, visionary, and humble tone.
-- When answering "Why should I hire him?", highlight his B.Tech CSE background, 1st rank semester standing, production-grade autonomous agent builds, published research in federated learning/LLM latency, and verified certifications (AWS Certified AI Practitioner, Google Cloud Professional ML Engineer).
-
+- When answering "Why should I hire him?", use only the skills, projects, achievements, and certifications contained in the portfolio context.
 PORTFOLIO KNOWLEDGE BASE:
 ${JSON.stringify(portfolioContext, null, 2)}
 `;
@@ -99,7 +98,7 @@ ${JSON.stringify(portfolioContext, null, 2)}
       const { portfolioContext, roleFocus = 'General AI & Full Stack', apiKey } = req.body;
       const ai = getGeminiClient(apiKey);
 
-      const prompt = `Generate a high-impact, executive Recruiter Summary for Akash Sharma based on this portfolio data:
+       const prompt = `Generate a high-impact, executive Recruiter Summary for K AKASH based on this portfolio data:
 ${JSON.stringify(portfolioContext, null, 2)}
 
 Target Role: ${roleFocus}
@@ -137,7 +136,7 @@ Keep it concise, quantifiable, and tailored for senior tech recruiters and engin
       const targetRole = role || 'AI Engineer';
       const ai = getGeminiClient(apiKey);
 
-      const prompt = `Generate a role-tailored professional resume for Akash Sharma for the position of "${targetRole}".
+      const prompt = `Generate a role-tailored professional resume for K Akash  for the position of "${targetRole}".
 
 Use this verified portfolio data:
 ${JSON.stringify(portfolioContext, null, 2)}
