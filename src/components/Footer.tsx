@@ -24,7 +24,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
             <span className="text-cyan-400">/&gt;</span>
           </div>
           <p className="text-xs text-slate-400 font-mono-tech">
-            Apple Design Award Winner Aesthetic • Designed with Three.js & Tailwind
+            
           </p>
         </div>
 
