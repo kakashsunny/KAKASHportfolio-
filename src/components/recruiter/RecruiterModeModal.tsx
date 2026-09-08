@@ -54,7 +54,7 @@ export const RecruiterModeModal: React.FC = () => {
       } catch {
         // Fallback static recruiter snapshot
         setAiSummary(
-          `## Executive Recruiter Brief: Akash Sharma\n\n**Candidate:** Akash Sharma (B.Tech CSE, 1st Rank Semester Standing)\n**Target Track:** ${roleFocus}\n\n### Key Highlights\n- **Production AI Systems:** Architected autonomous multi-agent systems and real-time vision inference pipelines.\n- **Technical Mastery:** Python, PyTorch, TypeScript, React, Distributed Systems, Cloud Infrastructure.\n- **Verified Credentials:** AWS Certified AI Practitioner, Google Cloud Professional ML Engineer.\n- **Work Ethic & Growth:** Relentless learning velocity, proven hackathon winner, and team multiplier.`
+          `## Executive Recruiter Brief: K AKASH\n\nCandidate: Akash Sharma (B.Tech CSE, 1st Rank Semester Standing)\nTarget Track: ${roleFocus}\n\n### Key Highlights\n- Production AI Systems: Architected autonomous multi-agent systems and real-time vision inference pipelines.\n- Technical Mastery: Python, PyTorch, TypeScript, React, Distributed Systems, Cloud Infrastructure.\n- **Verified Credentials:** AWS Certified AI Practitioner, Google Cloud Professional ML Engineer.\n- Work Ethic & Growth: Relentless learning velocity, proven hackathon winner, and team multiplier.`
         );
       } finally {
         setIsLoadingAi(false);
@@ -67,7 +67,7 @@ export const RecruiterModeModal: React.FC = () => {
   if (!isRecruiterModeOpen) return null;
 
   const handleCopy = () => {
-    navigator.clipboard.writeText(aiSummary || 'Recruiter Brief for Akash Sharma');
+    navigator.clipboard.writeText(aiSummary || 'Recruiter Brief for K AKASH');
     setCopied(true);
     setTimeout(() => setCopied(false), 2500);
   };
