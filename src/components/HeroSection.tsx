@@ -115,7 +115,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
   return (
     <section
       id="home"
-      className="relative min-h-screen pt-20 pb-16 px-4 sm:px-6 md:pl-24 md:pr-8 flex flex-col justify-center items-center max-w-7xl mx-auto z-20"
+      className="relative min-h-screen pt-28 pb-16 px-4 sm:px-6 md:pl-24 md:pr-8 flex flex-col justify-start items-center max-w-7xl mx-auto z-20"
     >
       {/* 1. Top OS Status, AI Actions & Admin Access */}
       <div className="w-full flex flex-wrap items-center justify-between gap-3 mb-6 animate-fade-in">
