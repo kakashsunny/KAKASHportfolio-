@@ -167,7 +167,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
         <div className="absolute -top-32 -left-32 w-96 h-96 rounded-full bg-cyan-400/10 blur-[75px] pointer-events-none" />
         <div className="absolute -bottom-32 -right-32 w-96 h-96 rounded-full bg-purple-500/10 blur-[75px] pointer-events-none" />
 
-        <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12">
+        <div className="relative z-10 flex flex-col lg:flex-row items-center lg:items-start justify-between gap-8 lg:gap-12">
           {/* Left Column: Typography Showcase, Typewriter & Actions */}
           <div className="flex-1 text-center lg:text-left space-y-4">
             <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-cyan-500/10 border border-cyan-400/30 text-cyan-300 text-xs font-mono-tech tracking-wide">
