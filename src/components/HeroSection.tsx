@@ -167,7 +167,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
         <div className="absolute -top-32 -left-32 w-96 h-96 rounded-full bg-cyan-400/10 blur-[75px] pointer-events-none" />
         <div className="absolute -bottom-32 -right-32 w-96 h-96 rounded-full bg-purple-500/10 blur-[75px] pointer-events-none" />
 
-        <div className="relative z-10 flex flex-col lg:flex-row items-center lg:items-start justify-between gap-8 lg:gap-12 lg:pt-12">
+        <div className="relative z-10 flex flex-col lg:flex-row items-center lg:items-start justify-between gap-8 lg:gap-12 lg:pt-14">
           {/* Left Column: Typography Showcase, Typewriter & Actions */}
           <div className="flex-1 text-center lg:text-left space-y-4">
             <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-cyan-500/10 border border-cyan-400/30 text-cyan-300 text-xs font-mono-tech tracking-wide">
@@ -244,7 +244,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
           </div>
 
           {/* Right Column: Properly Cropped Avatar Frame (No Top Cutoff) */}
-          <div className="relative flex-shrink-0 flex items-center justify-center p-2 lg:mt-6">
+          <div className="relative flex-shrink-0 flex items-center justify-center p-2 lg:mt-8">
             {/* Outer Glowing Energy Rings */}
             <div className="absolute inset-0 rounded-3xl bg-gradient-to-tr from-cyan-400/30 via-sky-300/20 to-purple-500/30 blur-2xl pointer-events-none" />
 
