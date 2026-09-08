@@ -162,12 +162,12 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
       </div>
 
       {/* 2. Large Central Liquid Glassmorphism Card (Firmly grounded, no floating drift) */}
-      <div className="w-full liquid-glass-card rounded-3xl p-6 sm:p-10 relative overflow-visible lg:overflow-hidden border border-white/20 shadow-[0_30px_80px_rgba(0,0,0,0.6),0_0_50px_rgba(56,189,248,0.2)]">
+      <div className="w-full liquid-glass-card rounded-3xl p-6 sm:p-10 relative overflow-visible border border-white/20 shadow-[0_30px_80px_rgba(0,0,0,0.6),0_0_50px_rgba(56,189,248,0.2)]">
         {/* Specular Ambient Glow Flares */}
         <div className="absolute -top-32 -left-32 w-96 h-96 rounded-full bg-cyan-400/10 blur-[75px] pointer-events-none" />
         <div className="absolute -bottom-32 -right-32 w-96 h-96 rounded-full bg-purple-500/10 blur-[75px] pointer-events-none" />
 
-         <div className="relative z-10 flex flex-col lg:flex-row items-center lg:items-start justify-between gap-8 lg:gap-12 pt-12">
+         <div className="relative z-10 flex flex-col lg:flex-row items-center lg:items-start justify-between gap-8 lg:gap-12 pt-12 lg:pt-16">
           {/* Left Column: Typography Showcase, Typewriter & Actions */}
           <div className="flex-1 text-center lg:text-left space-y-4">
             <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-cyan-500/10 border border-cyan-400/30 text-cyan-300 text-xs font-mono-tech tracking-wide">
