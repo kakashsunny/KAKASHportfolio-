@@ -244,7 +244,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
           </div>
 
           {/* Right Column: Properly Cropped Avatar Frame (No Top Cutoff) */}
-          <div className="relative flex-shrink-0 flex items-center justify-center p-2">
+          <div className="relative flex-shrink-0 flex items-center justify-center p-2 lg:mt-6">
             {/* Outer Glowing Energy Rings */}
             <div className="absolute inset-0 rounded-3xl bg-gradient-to-tr from-cyan-400/30 via-sky-300/20 to-purple-500/30 blur-2xl pointer-events-none" />
 
