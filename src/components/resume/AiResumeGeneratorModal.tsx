@@ -79,7 +79,7 @@ export const AiResumeGeneratorModal: React.FC = () => {
       doc.setFontSize(10);
 
       // Simple clean formatting
-      const lines = doc.splitTextToSize(resumeText || 'Akash Sharma Resume', 500);
+      const lines = doc.splitTextToSize(resumeText || 'K AKASH Resume', 500);
       let cursorY = 40;
 
       lines.forEach((line: string) => {
