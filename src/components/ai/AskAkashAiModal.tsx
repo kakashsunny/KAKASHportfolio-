@@ -146,7 +146,7 @@ export const AskAkashAiModal: React.FC = () => {
         id: `bot-${Date.now()}`,
         role: 'model',
         content:
-          "Akash Sharma is an Autonomous Agent Architect and B.Tech CSE scholar. He has built high-performance distributed AI systems (Autonomous Agent Orchestrator, DeepFusion Vision, Quantum Ledger) and holds verified AWS & Google Cloud credentials.",
+         "K AKASH is a B.Tech Computer Science student at CMR University and an AI/ML-focused full-stack developer. His work includes Formly AI, MongoDB Mastery, and AgriGuard, with experience in React, Node.js, PostgreSQL, MongoDB, Gemini API, and agentic AI systems.",
         timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
       };
       setMessages((prev) => [...prev, fallbackMsg]);
