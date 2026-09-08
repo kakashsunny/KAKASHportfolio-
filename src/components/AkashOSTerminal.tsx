@@ -702,7 +702,7 @@ export const AkashOSTerminal: React.FC<AkashOSTerminalProps> = ({
             onChange={(e) => setInputVal(e.target.value)}
             onKeyDown={handleKeyDown}
             placeholder="Type 'K AKASH' or press Enter to launch..."
-            className="flex-1 bg-transparent text-white font-mono-tech text-xs sm:text-sm placeholder:text-slate-500 focus:outline-none tracking-wide"
+            className="min-w-0 flex-1 bg-transparent text-white font-mono-tech text-xs sm:text-sm placeholder:text-slate-500 focus:outline-none tracking-wide"
             autoFocus
           />
 
@@ -716,7 +716,7 @@ export const AkashOSTerminal: React.FC<AkashOSTerminalProps> = ({
               }
             }}
             id="terminal-enter-btn"
-            className="px-3.5 py-1.5 rounded-xl bg-gradient-to-r from-sky-400 via-cyan-400 to-blue-500 text-slate-950 font-extrabold text-xs font-mono-tech hover:scale-105 hover:shadow-[0_0_20px_rgba(56,189,248,0.7)] transition-all cursor-pointer flex items-center gap-1.5 flex-shrink-0"
+           className="px-2 sm:px-3.5 py-1.5 rounded-xl bg-gradient-to-r from-sky-400 via-cyan-400 to-blue-500 text-slate-950 font-extrabold text-xs font-mono-tech hover:scale-105 hover:shadow-[0_0_20px_rgba(56,189,248,0.7)] transition-all cursor-pointer flex items-center gap-1 flex-shrink-0"
           >
             <span>ENTER</span>
             <ChevronRight className="w-3.5 h-3.5" />
