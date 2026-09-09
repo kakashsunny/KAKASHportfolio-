@@ -17,6 +17,7 @@ import {
 } from 'lucide-react';
 import confetti from 'canvas-confetti';
 import { usePortfolio } from '../context/PortfolioContext';
+import { submitContactMessage } from '../services/firestoreService';
 
 export const ContactSection: React.FC = () => {
   const { profile, socialLinks } = usePortfolio();
@@ -29,6 +30,7 @@ export const ContactSection: React.FC = () => {
     message: '',
   });
   const [submitted, setSubmitted] = useState(false);
+  const [isSending, setIsSending] = useState(false);
   const [selectedPreset, setSelectedPreset] = useState<string>('AI Project Collaboration');
 
   const presets = [
@@ -64,9 +66,15 @@ export const ContactSection: React.FC = () => {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  
+  const handleSubmit = async (e: React.FormEvent) => {  
     e.preventDefault();
     if (!formData.name || !formData.email || !formData.message) return;
+    setIsSending(true);
+
+    try {
+      await submitContactMessage(formData);
+
 
     // Trigger celebratory confetti
     try {
@@ -81,6 +89,12 @@ export const ContactSection: React.FC = () => {
     }
 
     setSubmitted(true);
+    } catch (error) {
+      console.error('Unable to send contact message:', error);
+      alert('Unable to send your message right now. Please use the email or WhatsApp contact options.');
+    } finally {
+      setIsSending(false);
+    }
   };
 
   return (
@@ -337,10 +351,11 @@ export const ContactSection: React.FC = () => {
               <button
                 type="submit"
                 id="contact-submit-btn"
+                disabled={isSending}
                 className="w-full py-3.5 rounded-2xl bg-gradient-to-r from-sky-400 via-cyan-400 to-blue-500 text-slate-950 font-bold text-sm tracking-wide flex items-center justify-center gap-2 hover:shadow-[0_0_30px_rgba(56,189,248,0.7)] transition-all active:scale-[0.99] cursor-pointer"
               >
                 <Send className="w-4 h-4" />
-                <span>Send Message to K Akash</span>
+                <span>{isSending ? 'Sending Message...' : 'Send Message to K Akash'}</span>
               </button>
             </form>
           )}
