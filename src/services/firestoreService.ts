@@ -51,6 +51,38 @@ export interface ProfileData {
   availableForHire: boolean;
   updatedAt?: unknown;
 }
+export interface ContactMessage {
+  id: string;
+  name: string;
+  email: string;
+  subject: string;
+  message: string;
+  createdAt?: unknown;
+}
+
+export const submitContactMessage = async (
+  message: Omit<ContactMessage, 'id' | 'createdAt'>
+): Promise<void> => {
+  await addDoc(collection(db, 'messages'), {
+    ...message,
+    createdAt: serverTimestamp(),
+  });
+};
+
+export const getContactMessages = async (): Promise<ContactMessage[]> => {
+  const snap = await getDocs(collection(db, 'messages'));
+  return snap.docs
+    .map((d) => ({ id: d.id, ...d.data() } as ContactMessage))
+    .sort((a, b) => {
+      const aTime = (a.createdAt as { toMillis?: () => number } | undefined)?.toMillis?.() || 0;
+      const bTime = (b.createdAt as { toMillis?: () => number } | undefined)?.toMillis?.() || 0;
+      return bTime - aTime;
+    });
+};
+
+export const deleteContactMessage = async (id: string): Promise<void> => {
+  await deleteDoc(doc(db, 'messages', id));
+};
 
 // 1. PROFILE CRUD
 export const getProfile = async (): Promise<ProfileData> => {
