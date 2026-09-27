@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <radialGradient id="bgGlow" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#0b1e36" />
+      <stop offset="60%" stop-color="#050d1a" />
+      <stop offset="100%" stop-color="#020610" />
+    </radialGradient>
+
+    <!-- Glowing Cyan/Teal Gradient -->
+    <linearGradient id="cyanGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#06b6d4" />
+      <stop offset="100%" stop-color="#6366f1" />
+    </linearGradient>
+
+    <!-- Accent Gradient -->
+    <linearGradient id="accentGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f2fe" />
+      <stop offset="100%" stop-color="#4facfe" />
+    </linearGradient>
+
+    <!-- Neon Glow Filter -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="12" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <filter id="subtleGlow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Squircle Rounded Container -->
+  <rect width="512" height="512" rx="112" fill="url(#bgGlow)" />
+  
+  <!-- Outer Cyber Border -->
+  <rect width="504" height="504" x="4" y="4" rx="108" fill="none" stroke="url(#cyanGlow)" stroke-width="6" stroke-opacity="0.6" />
+  
+  <!-- Subtle Internal Grid Grid Lines / Snowflake Hexagon -->
+  <g opacity="0.25" stroke="#38bdf8" stroke-width="2">
+    <circle cx="256" cy="256" r="180" fill="none" stroke-dasharray="6 8" />
+    <circle cx="256" cy="256" r="120" fill="none" />
+  </g>
+
+  <!-- Ambient Glow Behind Monogram -->
+  <circle cx="256" cy="256" r="110" fill="#00f2fe" opacity="0.15" filter="url(#glow)" />
+
+  <!-- Code Bracket Left: < -->
+  <path d="M 130 200 L 76 256 L 130 312" 
+        fill="none" 
+        stroke="url(#accentGrad)" 
+        stroke-width="26" 
+        stroke-linecap="round" 
+        stroke-linejoin="round"
+        filter="url(#subtleGlow)" />
+
+  <!-- Code Bracket Right: /> -->
+  <g filter="url(#subtleGlow)">
+    <!-- Slash / -->
+    <line x1="390" y1="205" x2="366" y2="307" 
+          stroke="#38bdf8" 
+          stroke-width="24" 
+          stroke-linecap="round" />
+    <!-- Greater-than > -->
+    <path d="M 405 200 L 445 256 L 405 312" 
+          fill="none" 
+          stroke="url(#accentGrad)" 
+          stroke-width="26" 
+          stroke-linecap="round" 
+          stroke-linejoin="round" />
+  </g>
+
+  <!-- Futuristic Monogram "A" with Crystal / Snowflake Apex -->
+  <g filter="url(#subtleGlow)">
+    <!-- Left Leg of A -->
+    <path d="M 256 128 L 180 348" 
+          fill="none" 
+          stroke="url(#cyanGlow)" 
+          stroke-width="32" 
+          stroke-linecap="round" 
+          stroke-linejoin="round" />
+
+    <!-- Right Leg of A -->
+    <path d="M 256 128 L 332 348" 
+          fill="none" 
+          stroke="url(#cyanGlow)" 
+          stroke-width="32" 
+          stroke-linecap="round" 
+          stroke-linejoin="round" />
+
+    <!-- Crossbar of A - Glowing Neon Bridge -->
+    <path d="M 206 280 L 306 280" 
+          fill="none" 
+          stroke="#ffffff" 
+          stroke-width="24" 
+          stroke-linecap="round" />
+  </g>
+
+  <!-- Diamond Node Core at Apex -->
+  <polygon points="256,104 274,128 256,152 238,128" fill="#ffffff" filter="url(#subtleGlow)" />
+  
+  <!-- Subtle Snow Crystal Micro-dots -->
+  <circle cx="256" cy="76" r="6" fill="#38bdf8" />
+  <circle cx="180" cy="380" r="5" fill="#38bdf8" />
+  <circle cx="332" cy="380" r="5" fill="#38bdf8" />
+</svg>
